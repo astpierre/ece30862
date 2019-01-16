@@ -1,0 +1,29 @@
+ISA vs HASA (using Duck example)
+
+                    class Duck
+            /           |               \
+class Mallard       class RedHead       class RubberDuck
+
+When testing, we noticed RubberDuck does not fly...
+    Solution 1) override the fly method
+        - but this does not solve issue that base class has
+          properties of ducks not for all ducks
+        - ie. half the properties are needing to be
+          overridden
+    Solution 2) access levels and encapsulation
+
+Want an ISA relationship
+    - fundamental to what is going on
+Want an HASA relationship
+    - if you are constantly needing to override things
+
+File extensions
+    C++ programs have header files and code files
+        header files: *.h or *.hpp
+        code files: *.cc, *.cpp, *.c++, *.cp (and more)
+
+Access levels and inheritance
+    When inheriting, we can always make something
+    more private, but cannot make it less private
+    Always make things private unless you have
+    a good reason to make something not private
