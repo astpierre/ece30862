@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Duck.h"
-#include "Mallard.h"
-#include "RedHead.h"
-#include "DogToy.h"
-#include "Rubber.h"
-#include "Dog.h"
+#include "src/lib/Duck.h"
+#include "src/lib/Mallard.h"
+#include "src/lib/RedHead.h"
+#include "src/lib/DogToy.h"
+#include "src/lib/Rubber.h"
+#include "src/lib/Dog.h"
 
 int main (int argc, char *argv[]) {
 

@@ -7,4 +7,4 @@ Squeak::Squeak() { }
 
 Squeak::~Squeak(){ }
 
-void Squeak::quack() {std::cout << "squeak" << std::endl;}
+void Squeak::quack() {std::cout << "squeak\n";}

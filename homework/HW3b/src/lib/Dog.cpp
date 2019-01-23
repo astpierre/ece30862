@@ -11,3 +11,7 @@ void Dog::play(Duck* fowl) {
     std::cout << "dog destroys "; fowl->display( ); std::cout << std::endl;
     fowl->setQuackBehavior(new NoQuack);
 }
+
+std::string Dog::bark() {
+    return "BARK!";
+}
