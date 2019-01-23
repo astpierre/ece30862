@@ -39,11 +39,11 @@ int main(int argc, char **argv) {
 
     std::cout << "Q16 --> Q21" << std::endl;
     d1aP->f1( ); // Q16
-    //d1aP->f2( ); // Q17
+    std::cout << "Q17: E\n";//d1aP->f2( ); // Q17
     d1aP->f3( ); // Q18
     d1aP->f4( ); // Q19
-    //d1aP->f5( ); // Q20
-    //std::cout << d1aP->i << ", " << d1aP->j << ", " << d1aP->k << std::endl; // Q21
+    std::cout << "Q20: E\n";//d1aP->f5( ); // Q20
+    std::cout << "Q21: E\n";//std::cout << d1aP->i << ", " << d1aP->j << ", " << d1aP->k << std::endl; // Q21
 
     std::cout << "Q22 --> Q27" << std::endl;
     d1aV.f1( ); // Q22
@@ -119,8 +119,8 @@ int main(int argc, char **argv) {
     std::cout << d2V.i << ", " << d2V.j << ", " << d2V.k << std::endl; // Q72
 
     std::cout << "Q73 --> Q76" << std::endl;
-    //bP = d1aP; // Q73
-    //bV = d1aV; // Q74
-    //d1P = d1aP; // Q75
-    //d1V = d1aV; // Q76
+    std::cout << "Q73: E\n";//bP = d1aP; // Q73
+    std::cout << "Q74: E\n";//bV = d1aV; // Q74
+    std::cout << "Q75: E\n";//d1P = d1aP; // Q75
+    std::cout << "Q76: E\n";//d1V = d1aV; // Q76
 }
