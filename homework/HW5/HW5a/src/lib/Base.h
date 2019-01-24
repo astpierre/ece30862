@@ -14,6 +14,9 @@ public:
    Base( );
    virtual ~Base( );
    void print( );
+   int getPrivB();
+   int getPublicB();
+   int getProtB();
 };
 
 #endif /* BASE_H */

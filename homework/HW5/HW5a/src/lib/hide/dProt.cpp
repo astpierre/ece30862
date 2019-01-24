@@ -2,11 +2,10 @@
 
 dProt::dProt( ) { }
 dProt::~dProt( ){ }
-void dProt::print( ) { 
+void dProt::print( ) {
    cout << "dProt" << endl;
-   cout << "privB: " << privB; 
+   cout << "privB: " << dProt::getPrivB() << endl; 
    cout << ", protB: " << protB;
-   cout << ", publicB: " << publicB; 
+   cout << ", publicB: " << publicB;
    cout << endl << endl;
 }
-

@@ -2,11 +2,10 @@
 
 ProtDerived::ProtDerived( ) { }
 ProtDerived::~ProtDerived( ){ }
-void ProtDerived::print( ) { 
+void ProtDerived::print( ) {
    cout << "ProtDerived" << endl;
-   cout << "privB: " << privB; 
+   cout << "privB: " << Base::getPrivB() << endl; 
    cout << ", protB: " << protB;
-   cout << ", publicB: " << publicB; 
+   cout << ", publicB: " << publicB;
    cout << endl << endl;
 }
-
