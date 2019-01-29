@@ -4,7 +4,7 @@ Base::Base( ) : privB(1), protB(2), publicB(3) {  }
 
 Base::~Base( ) { }
 
-void Base::print( ) {
+void Base::print( ) const {
    cout << "Base" << endl;
    cout << "privB: " << privB;
    cout << ", protB: " << protB;
@@ -12,12 +12,12 @@ void Base::print( ) {
    cout << endl << endl;
 }
 
-int Base::getPrivB() {
+int Base::getPrivB() const {
     return privB;
 }
-int Base::getProtB() {
+int Base::getProtB() const {
     return protB;
 }
-int Base::getPublicB() {
+int Base::getPublicB() const {
     return publicB;
 }

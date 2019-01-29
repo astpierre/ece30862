@@ -11,12 +11,14 @@ protected:
    int protB;
 public:
    int publicB;
+
    Base( );
    virtual ~Base( );
-   virtual void print( );
-   virtual int getPrivB();
-   virtual int getPublicB();
-   virtual int getProtB();
+
+   virtual void print( ) const;
+   virtual int getPrivB() const;
+   virtual int getPublicB() const;
+   virtual int getProtB() const;
 };
 
 #endif /* BASE_H */

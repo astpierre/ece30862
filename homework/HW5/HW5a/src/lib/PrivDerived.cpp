@@ -3,22 +3,14 @@
 PrivDerived::PrivDerived( ) { }
 PrivDerived::~PrivDerived( ){ }
 
-void printPrivDerived( ) {
-   cout << "PrivDerived" << endl;
-   cout << "privB: " << getPrivBPrivDerived() << endl;
-   cout << ", protB: " << getProtBPrivDerived() << endl;
-   cout << ", publicB: " << getPublicBPrivDerived() << endl;
-   cout << endl << endl;
+int PrivDerived::showMePublicB() const {
+    return getPublicB();
 }
 
-int getPrivBPrivDerived() {
-    return Base::getPrivB();
+int PrivDerived::showMeProtB() const {
+    return getProtB();
 }
 
-int getPublicBPrivDerived() {
-    return Base::getPublicB();
-}
-
-int getProtBPrivDerived() {
-    return Base::getProtB();
+int PrivDerived::showMePrivB() const {
+    return getPrivB();
 }

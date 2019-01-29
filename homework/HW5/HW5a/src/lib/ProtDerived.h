@@ -9,7 +9,10 @@ class ProtDerived : protected Base {
 public:
    ProtDerived( );
    virtual ~ProtDerived( );
-   void print( );
+   //void print( );
+   int showMePublicB() const;
+   int showMePrivB() const;
+   int showMeProtB() const;
 };
 
 #endif /* PROTDERIVED_H */
