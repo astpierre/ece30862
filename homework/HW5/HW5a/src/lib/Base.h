@@ -13,10 +13,10 @@ public:
    int publicB;
    Base( );
    virtual ~Base( );
-   void print( );
-   int getPrivB();
-   int getPublicB();
-   int getProtB();
+   virtual void print( );
+   virtual int getPrivB();
+   virtual int getPublicB();
+   virtual int getProtB();
 };
 
 #endif /* BASE_H */

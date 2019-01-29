@@ -9,7 +9,13 @@ class PrivDerived : private Base {
 public:
    PrivDerived( );
    virtual ~PrivDerived( );
-   void print( );
+
+   void printPrivDerived( );
+   int getPrivBPrivDerived();
+   int getPublicBPrivDerived();
+   int getProtBPrivDerived();
+
 };
+
 
 #endif /* PRIVDERIVED_H */
