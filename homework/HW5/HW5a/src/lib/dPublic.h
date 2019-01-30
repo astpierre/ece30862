@@ -9,7 +9,6 @@ class dPublic : public PublicDerived {
 public:
    dPublic( );
    virtual ~dPublic( );
-   void print( );
 };
 
 #endif /* DPUBLIC_H */

@@ -9,7 +9,6 @@ class dPriv : public PrivDerived {
 public:
    dPriv( );
    virtual ~dPriv( );
-   void print( );
 };
 
 #endif /* DPRIV_H */

@@ -1,7 +1,6 @@
 #ifndef PERSON_H_
 #define PERSON_H_
 #include <string>
-#include <string>
 
 class Person {
 

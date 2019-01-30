@@ -3,7 +3,7 @@
 #include <iostream>
 
 Faculty::Faculty(int d, int m, int y, std::string n):Person(d,m,y,n) {
-   std::cout << "construct Faculty" << std::endl;
+   std::cout << "constructed Faculty" << std::endl;
  }
 Faculty::~Faculty( ) { }
 
