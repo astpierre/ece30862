@@ -8,8 +8,8 @@
 // inherits from the class that declared them.
 //
 #include <iostream>
-#include "/src/lib/Base.h"
-#include "/src/lib/D.h"
+#include "src/lib/Base.h"
+#include "src/lib/D.h"
 
 void foo1(Base& b) {
    b.print( );
