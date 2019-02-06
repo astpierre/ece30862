@@ -1,6 +1,7 @@
-#include "Base.h"
-#include "Derived.h"
+#include <iostream>
 #include <string>
+#include "src/lib/Base.h"
+#include "src/lib/Derived.h"
 
 void foo(Base b) { }
 void foo(Derived d) { }
@@ -12,7 +13,7 @@ int main(void) {
    Derived* dP = new Derived( ); // LINE 2
    Base b; // LINE 3
    Derived d; // LINE 4
-   
+
 
    foo(b); // LINE 5
    foo(d); // LINE 6
