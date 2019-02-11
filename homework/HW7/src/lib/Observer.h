@@ -5,7 +5,7 @@ class Observer {
 public:
    Observer( );
    virtual ~Observer( );
-   virtual void notify(double, double)=0;
+   virtual void notify(double xx, double yy)=0;
 };
 
 #endif /* OBSERVER_H */

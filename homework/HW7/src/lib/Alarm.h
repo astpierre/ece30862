@@ -3,7 +3,7 @@
 #include "Subject.h"
 #include "Observer.h"
 
-class GPS: public Observer {
+class Alarm: public Observer {
 public:
    Alarm(Subject *, int, double, double, double);
    virtual ~Alarm( );

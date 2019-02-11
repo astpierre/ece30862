@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Map.h"
 
-Map::Map(Subject * s) {  
+Map::Map(Subject * s) {
    s->subscribe(this);
 }
 
