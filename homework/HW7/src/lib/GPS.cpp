@@ -11,15 +11,15 @@ GPS::~GPS( ) {
 }
 
 void GPS::subscribe(Observer * o) {
-    if(this->idx >= this->size) {
+    if(this->idx > this->size) {
         std::cout << "ERROR: GPS::subscribe, observer array full!" << std::endl;
     } else {
         this->obs[idx] = o;
-        this->idx += 1;
-        std::cout <<"idx="<<idx<<std::endl;
-    }
-    if(this->idx == this->size) {
-        std::cout << "obs now full" << '\n';
+        if(this->idx < this->size) {
+            this->idx += 1;
+        } else {
+            std::cout <<"idx="<<idx<<"=size="<<size<<std::endl;
+        }
     }
     return;
 }

@@ -17,6 +17,4 @@ private:
     Observer ** obs;
 };
 
-
-
 #endif /* GPS_H */
