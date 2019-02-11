@@ -5,16 +5,16 @@
 
 class GPS: public Subject {
 public:
-   GPS( );
-   virtual ~GPS( );
-   virtual void subscribe(Observer *);
-   virtual void update(double, double);
-   virtual void notify();
+    GPS();
+    virtual ~GPS( );
+    virtual void subscribe(Observer *);
+    virtual void update(double, double);
+    virtual void notify();
 private:
     double x, y;
     int idx;
     int size;
-    Observer** obs;
+    Observer ** obs;
 };
 
 
