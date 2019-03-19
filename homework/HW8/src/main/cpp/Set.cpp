@@ -125,6 +125,21 @@ Set Set::operator~( ) {
     return newSet;
 }
 
+/*std::ostream& Set::operator<<( std::ostream& os ) {
+    unsigned int ctr = 0;
+    for(unsigned int i=0; i<this->numSlots; i++) {
+        for(unsigned int j=0; j<32; j++) {
+            if(this->slots[i] & (1<<j)) os << ctr << " ";
+            ctr += 1;
+        }
+    }
+    return os;
+}*/
+
+/*Set::Set( const Set Set2 ) {
+    std::cout << "Copy constructor invoked." << std::endl;
+}*/
+
 void Set::printSet( ) {
     unsigned int ctr = 0;
     for(int i=0; i<numSlots; i++) {
@@ -134,7 +149,6 @@ void Set::printSet( ) {
             }
             ctr += 1;
         }
-        std::cout << " " << std::endl;
     }
     std::cout << " " << std::endl;
 }

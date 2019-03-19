@@ -8,6 +8,8 @@ public:
     Set( unsigned int );
     virtual ~Set( );
 
+    //Set( const Set );
+
     void add( unsigned int );
     Set operator+( const unsigned int );
 
@@ -17,6 +19,7 @@ public:
     Set operator&( const Set );
     Set operator/( const Set );
     Set operator~( );
+    //std::ostream& operator<<( std::ostream& );
 
     void printSet( );
     unsigned int getNumSlots( );

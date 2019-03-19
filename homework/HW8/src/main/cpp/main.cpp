@@ -8,12 +8,13 @@ int main(int argc, char * argv[]) {
     a=a+4;
     a=a+8;
     a.printSet(); // Need to overload << op
+    //cout << "a w/4, 8: " << a << endl;
 
     //a = a + 4;
     //a = a + 8;
     //cout << "a w/4, 8: " << a << endl; // a w/4, 8: 4, 8
 
-    Set b = Set(63);
+    /*Set b = Set(63);
     b=b+8;
     b=b+16;
     b.printSet();
@@ -37,7 +38,7 @@ int main(int argc, char * argv[]) {
     e=e+18;
     e=e+20;
     e=~e;
-    e.printSet();
+    e.printSet();*/
 
     //cout << "b w/8, 16: " << b << endl; // b w/8, 16: 8, 16
 
