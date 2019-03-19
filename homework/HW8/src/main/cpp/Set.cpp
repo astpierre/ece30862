@@ -15,8 +15,8 @@ Set::~Set( ) {  }
 
 void Set::add( unsigned int newMember ) {
     unsigned int newSlot = 0;
-    newSlot = newMember / 32;
-    unsigned int position = newMember % 31;
+    newSlot = (newMember) / 32;
+    unsigned int position = (newMember) % 32;
     if(slots[newSlot]&(1<<(position))) {
         numElements = numElements;
     } else {
@@ -27,7 +27,7 @@ void Set::add( unsigned int newMember ) {
 
 Set Set::operator+( const unsigned int newMember ) {
     unsigned int setSize = numSlots;
-    Set newSet = Set(setSize * 32);
+    Set newSet = Set(63);
     if(numElements == 0) {
         newSet.add(newMember);
         return newSet;
@@ -55,7 +55,7 @@ void Set::remove( unsigned int oldMember ) {
 
 Set Set::operator-( const unsigned int oldMember ) {
     unsigned int setSize = getNumSlots();
-    Set newSet = Set(setSize * 32);
+    Set newSet = Set(63);
 
     unsigned int ctr = 0;
     for(int i=0; i<numSlots; i++) {
@@ -93,6 +93,38 @@ Set Set::operator&( const Set Set2 ) {
     return newSet;
 }
 
+Set Set::operator/( const Set Set2 ) {
+    Set newSet = Set(numSlots * 32);
+    unsigned int ctr = 0;
+    for(unsigned int i=0; i<numSlots; i++) {
+        for(unsigned int j=0; j<32; j++) {
+            if(this->slots[i] & (1<<j)) {
+                if(Set2.slots[i] & (1<<j)) {
+                    newSet.numElements = newSet.numElements;
+                } else {
+                    newSet.add(ctr);
+                }
+            }
+            ctr += 1;
+        }
+    }
+    return newSet;
+}
+
+Set Set::operator~( ) {
+    Set newSet = Set(63);
+    unsigned int ctr = 0;
+    for(unsigned int i=0; i<numSlots; i++) {
+        for(unsigned int j=0; j<32; j++) {
+            if(this->slots[i] & (1<<j)) {
+                newSet.numElements = newSet.numElements;
+            } else newSet.add(ctr);
+            ctr += 1;
+        }
+    }
+    return newSet;
+}
+
 void Set::printSet( ) {
     unsigned int ctr = 0;
     for(int i=0; i<numSlots; i++) {
@@ -102,6 +134,7 @@ void Set::printSet( ) {
             }
             ctr += 1;
         }
+        std::cout << " " << std::endl;
     }
     std::cout << " " << std::endl;
 }

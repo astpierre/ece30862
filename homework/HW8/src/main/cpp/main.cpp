@@ -21,6 +21,23 @@ int main(int argc, char * argv[]) {
     Set c = a&b;
     c.printSet();
 
+    Set d = a/b;
+    d.printSet();
+
+    Set e = Set(63);
+    //e=e+0;
+    e=e+2;
+    e=e+4;
+    e=e+6;
+    e=e+8;
+    e=e+10;
+    e=e+12;
+    e=e+14;
+    e=e+16;
+    e=e+18;
+    e=e+20;
+    e=~e;
+    e.printSet();
 
     //cout << "b w/8, 16: " << b << endl; // b w/8, 16: 8, 16
 

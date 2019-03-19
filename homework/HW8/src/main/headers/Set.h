@@ -15,6 +15,8 @@ public:
     Set operator-( const unsigned int );
 
     Set operator&( const Set );
+    Set operator/( const Set );
+    Set operator~( );
 
     void printSet( );
     unsigned int getNumSlots( );
