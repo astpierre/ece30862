@@ -3,8 +3,11 @@
 using namespace std;
 
 int main(int argc, char * argv[]) {
+    Set * s = new Set();
+    s->ShowSet();
 
-   Set a = Set(63);
+
+    /*Set a = Set(63);
    Set b = Set(63);
 
    a = a + 4;
@@ -26,5 +29,6 @@ int main(int argc, char * argv[]) {
 
    cout << "~a: " << ~a << endl;
    cout << "a copy count: " << a.getCopyCount( ) << endl;
-   cout << "b copy count: " << b.getCopyCount( ) << endl;
+   cout << "b copy count: " << b.getCopyCount( ) << endl;*/
+    return 0;
 }

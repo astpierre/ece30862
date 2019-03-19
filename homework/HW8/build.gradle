@@ -1,0 +1,11 @@
+//apply plugin: 'cpp-library'
+apply plugin: 'cpp-unit-test'
+apply plugin: "cpp-application"
+
+application {
+    baseName = "HW9"
+}
+
+unitTest {
+    baseName = "HW9Test"
+}
