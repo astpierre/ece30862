@@ -14,13 +14,14 @@ public:
     void remove( unsigned int );
     Set operator-( const unsigned int );
 
+    Set operator&( const Set );
 
     void printSet( );
     unsigned int getNumSlots( );
 
-private:
     unsigned int * slots;
     unsigned int numSlots;
+    unsigned int numElements;
 };
 
 #endif /* SET_H */
