@@ -32,3 +32,5 @@
 *.app
 reference.pdf
 *.zip
+
+*.gradle
