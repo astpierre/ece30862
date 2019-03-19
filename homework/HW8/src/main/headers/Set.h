@@ -5,13 +5,22 @@
 
 class Set {
 public:
-    Set( );
+    Set( unsigned int );
     virtual ~Set( );
 
-    void ShowSet( );
+    void add( unsigned int );
+    Set operator+( const unsigned int );
+
+    void remove( unsigned int );
+    Set operator-( const unsigned int );
+
+
+    void printSet( );
+    unsigned int getNumSlots( );
 
 private:
-    int i;
+    unsigned int * slots;
+    unsigned int numSlots;
 };
 
 #endif /* SET_H */

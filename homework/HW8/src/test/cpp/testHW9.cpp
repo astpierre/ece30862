@@ -3,7 +3,7 @@
 #include <cassert>
 
 void TestSet() {
-    Set * s = new Set();
+    Set * s = new Set(63);
     std::cout << "[test] set returns proper string representation..." << std::flush;
     //assert(s->ShowSet() == "Set works!");
     std::cout << " pass" << std::endl;
