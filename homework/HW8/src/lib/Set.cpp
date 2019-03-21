@@ -5,7 +5,7 @@
 Set::Set( unsigned int maxSize ) {
     numSlots = maxSize/32 + 1;
     slots = new unsigned int [numSlots];
-    for(int i=0; i<numSlots; i++) {
+    for(unsigned int i=0; i<numSlots; i++) {
         slots[i] &= 0x00000000;
     }
     numElements = 0;
@@ -26,7 +26,7 @@ void Set::add( unsigned int newMember ) {
 }
 
 Set Set::operator+( const unsigned int newMember ) {
-    unsigned int setSize = numSlots;
+    // /unsigned int setSize = numSlots;
     Set newSet = Set(63);
     if(numElements == 0) {
         newSet.add(newMember);
@@ -34,7 +34,7 @@ Set Set::operator+( const unsigned int newMember ) {
     }
 
     unsigned int ctr = 0;
-    for(int i=0; i<numSlots; i++) {
+    for(unsigned int i=0; i<numSlots; i++) {
         for(unsigned int j=0; j<32; j++) {
             if(slots[i] & (1<<j)) {
                 newSet.add(ctr);
@@ -54,11 +54,11 @@ void Set::remove( unsigned int oldMember ) {
 }
 
 Set Set::operator-( const unsigned int oldMember ) {
-    unsigned int setSize = getNumSlots();
+    //unsigned int setSize = getNumSlots();
     Set newSet = Set(63);
 
     unsigned int ctr = 0;
-    for(int i=0; i<numSlots; i++) {
+    for(unsigned int i=0; i<numSlots; i++) {
         for(unsigned int j=0; j<32; j++) {
             if(slots[i] & (1<<j)) {
                 newSet.add(ctr);
@@ -80,7 +80,7 @@ Set Set::operator&( const Set Set2 ) {
 
     Set newSet = Set(maxNumSlots * 32);
     unsigned int ctr = 0;
-    for(int i=0; i<maxNumSlots; i++) {
+    for(unsigned int i=0; i<maxNumSlots; i++) {
         for(unsigned int j=0; j<32; j++) {
             if(this->slots[i] & (1<<j)) {
                 if(Set2.slots[i] & (1<<j)) {
@@ -142,7 +142,7 @@ Set Set::operator~( ) {
 
 void Set::printSet( ) {
     unsigned int ctr = 0;
-    for(int i=0; i<numSlots; i++) {
+    for(unsigned int i=0; i<numSlots; i++) {
         for(unsigned int j=0; j<32; j++) {
             if(slots[i] & (1<<j)) {
                 std::cout << ctr << " ";
