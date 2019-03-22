@@ -1,20 +1,19 @@
-package HW9;
-
-import org.joda.time.LocalTime;
+import java.io.*;
 
 class Main {
+
     public static void main(String args[]) {
-        System.out.println("HEY, I WORK!");
-        MyList ml = new MyList();
-        System.out.println(ml.sayHello());
 
-        LocalTime currentTime = new LocalTime();
-        System.out.println("The current local time is: " + currentTime);
+        MyList mlArray = new MyList();
+        mlArray.add(1);
+        mlArray.add(2);
+        mlArray.add(3);
+        String ostr = mlArray.toString();
+        System.out.println(ostr);
 
-        /*MyList [ ] mlArray = new MyList[2];
 
 
-        MyList tmp = new LongList(0);
+        /*MyList tmp = new LongList(0);
         for (int i = 1; i < 11; i++) {
             tmp = new LongList((LongList) tmp, i);
         }
