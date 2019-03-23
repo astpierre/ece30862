@@ -1,21 +1,13 @@
-import java.io.*;
-
 class Main {
 
     public static void main(String args[]) {
+        Cloneable [] c = new Cloneable[2];
+        MyList [ ] mlArray = new MyList[2];
 
-        MyList mlArray = new MyList();
-        mlArray.add(1);
-        mlArray.add(2);
-        mlArray.add(3);
-        String ostr = mlArray.toString();
-        System.out.println(ostr);
+        MyList tmp = new LongList(0);
+        for(int i = 1; 1 < 11; i++) {
+            tmp = new LongList((LongList)tmp, (long)i);
 
-
-
-        /*MyList tmp = new LongList(0);
-        for (int i = 1; i < 11; i++) {
-            tmp = new LongList((LongList) tmp, i);
         }
         mlArray[0] = tmp;
 
@@ -32,6 +24,7 @@ class Main {
                 System.out.println( );
                 ml = ml.next( );
             }
-        }*/
+        }
+        return;
     }
 }
