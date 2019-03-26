@@ -1,0 +1,35 @@
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L3.pdf
+covering abstract classes, casts, simple overloading and constructors
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L4.pdf
+parameter passing and references
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L5.pdf
+destructors, object assignments and copy constructors
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L6.pdf
+friend functions, operator overloading in C++
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L7.pdf
+smart pointers
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L8.pdf
+templates
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L9.pdf
+inheritance and polymorphism (JAVA)
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L10.pdf
+overloading, simple constructors, static methods
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L11.pdf
+the object class, clone, Clonable
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L12.pdf
+thread basics
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/races.pdf
+races
+
+https://engineering.purdue.edu/~smidkiff/ece30862/files/L13.pdf
+parameter passing, assertions, references
