@@ -1,6 +1,8 @@
+package com.company;
+
 // The class that actually performs on a part of a matrix multiply in a
 // thread.  Change this to implement Runnable.
-class MM extends Thread implements Runnable {                                         
+class MM extends Thread implements Runnable {
 
     // Times for each thread
     private static long[ ] threadTime = new long[4];
@@ -16,29 +18,29 @@ class MM extends Thread implements Runnable {
 
     // each thread has a unique id from 0 to maxThreads-1.
     public MM(int maxThreads, int arraySize) {
-       tID = threadCount++;
-       startP = tID*(arraySize/maxThreads);
-       endP = (tID+1)*(arraySize/maxThreads);
+        tID = threadCount++;
+        startP = tID*(arraySize/maxThreads);
+        endP = (tID+1)*(arraySize/maxThreads);
     }
 
     // getter function to return the private field time
     public static long getThreadTime(int t) {
-       return threadTime[t];
+        return threadTime[t];
     }
 
     void matrixMultiply( ) {
-       for (int i = startP; i < endP; i++) {
-          for (int j = 0; j < Main.N; j++) {
-             for (int k = 0; k < Main.N; k++) {
-                 Main.C[i][j] += Main.A[i][k] * Main.B[k][j];
-             }
-          }
-       }
+        for (int i = startP; i < endP; i++) {
+            for (int j = 0; j < Main.N; j++) {
+                for (int k = 0; k < Main.N; k++) {
+                    Main.C[i][j] += Main.A[i][k] * Main.B[k][j];
+                }
+            }
+        }
     }
 
-   public void run( ) {
-      threadTime[tID] = System.currentTimeMillis();
-      matrixMultiply( );
-      threadTime[tID] = System.currentTimeMillis() - threadTime[tID];
-   }
+    public void run( ) {
+        threadTime[tID] = System.currentTimeMillis();
+        matrixMultiply( );
+        threadTime[tID] = System.currentTimeMillis() - threadTime[tID];
+    }
 }
